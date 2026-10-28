@@ -3,44 +3,156 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cropcut Support</title>
-<meta name="description" content="Support and FAQ for Cropcut, the free photo-to-sticker app for iPhone.">
+<title>Cropcut: Sticker Maker – free sticker maker and background remover for iPhone</title>
+<meta name="description" content="Cropcut is a completely free sticker maker and background remover for iPhone. No ads, no subscription, no account, no watermark. Everything runs on your device, in 31 languages.">
+<link rel="canonical" href="https://adles4.github.io/cropcut/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cropcut: Sticker Maker – free sticker maker and background remover for iPhone">
+<meta property="og:description" content="Turn any photo into a sticker. 100% free, no ads, no subscription, no account, no watermark. Runs entirely on your iPhone.">
+<meta property="og:url" content="https://adles4.github.io/cropcut/">
+<meta name="apple-itunes-app" content="app-id=6810356642">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Cropcut: Sticker Maker",
+  "alternateName": "Cropcut",
+  "operatingSystem": "iOS",
+  "applicationCategory": "DesignApplication",
+  "applicationSubCategory": "Sticker maker, background remover, photo cutout",
+  "description": "Cropcut is a completely free sticker maker and background remover for iPhone. Tap Remove Background for an instant cutout, or trace a subject with your finger and Cropcut snaps to the edges. Save cutouts as reusable stickers, drop them onto any photo in Compose, add text and markup, then save or share. No ads, no subscription, no account, no watermark. All processing happens on the device.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "isAccessibleForFree": true,
+  "inLanguage": ["en","ar","zh","cs","da","nl","fi","fr","de","el","he","hi","hu","id","it","ja","ko","ms","nb","pl","pt","ro","ru","es","sv","th","tr","uk","vi"],
+  "installUrl": "https://apps.apple.com/app/id6810356642",
+  "downloadUrl": "https://apps.apple.com/app/id6810356642",
+  "url": "https://adles4.github.io/cropcut/",
+  "sameAs": ["https://apps.apple.com/app/id6810356642", "https://github.com/adles4/cropcut"],
+  "author": { "@type": "Person", "name": "Ash", "url": "https://github.com/adles4" },
+  "privacyPolicy": "https://adles4.github.io/cropcut/privacy.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is Cropcut really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cropcut is completely free. There is no Pro tier, no subscription, no in-app purchases, no ads, no watermark and no daily limit." } },
+    { "@type": "Question", "name": "Does Cropcut add a watermark to stickers?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every sticker and composition is saved as a clean transparent PNG with no watermark." } },
+    { "@type": "Question", "name": "Does Cropcut upload my photos?", "acceptedAnswer": { "@type": "Answer", "text": "No. Cropcut has no server and no account. All background removal and editing happens on your iPhone. Photos never leave your device unless you share them yourself." } },
+    { "@type": "Question", "name": "How is Cropcut different from the iPhone's built-in Add Sticker feature?", "acceptedAnswer": { "@type": "Answer", "text": "iOS can lift a subject from a photo and turn it into a sticker, and for simple photos that works well. Cropcut adds manual tracing with edge snapping for when auto-detection picks the wrong thing, an eraser for tidying the result, a sticker tray that saves cutouts as transparent PNGs you can use in any app, and a Compose mode for placing stickers on other photos with text and freehand markup." } },
+    { "@type": "Question", "name": "Can I make WhatsApp or iMessage stickers with Cropcut?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cutouts are saved as transparent PNGs to your Photos library, so you can send them in iMessage, add them to WhatsApp sticker packs, or paste them into any app." } },
+    { "@type": "Question", "name": "What languages does Cropcut support?", "acceptedAnswer": { "@type": "Answer", "text": "Cropcut's interface is available in 31 languages, including English, Spanish, Portuguese, French, German, Japanese, Korean, Chinese, Arabic, Hindi, Thai, Vietnamese, Ukrainian and Turkish. It is available on the App Store in 175 countries." } },
+    { "@type": "Question", "name": "Is Cropcut: Sticker Maker the same as the CropCut video editor?", "acceptedAnswer": { "@type": "Answer", "text": "No. Cropcut: Sticker Maker is an independent iPhone sticker maker and background remover by a solo developer. It is not related to any CropCut video editing app, and it is not CapCut." } }
+  ]
+}
+</script>
 <style>
-body{margin:0;background:#FBF8FC;color:#1E1530;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+:root{
+  --bg:#FBF8FC;--ink:#1E1530;--muted:#6B5F7A;--link:#6E3BD6;--pink:#E24C9A;
+  --card:#FFFFFF;--line:#E7DFF0;--chip:#F1EAFB;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#15101F;--ink:#F1ECF7;--muted:#A79BB8;--link:#A98BF0;--card:#1E1730;--line:#33284A;--chip:#2A2040}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
 main{max-width:680px;margin:0 auto;padding:48px 20px 80px}
 h1{font-size:2.2rem;margin:0 0 4px;letter-spacing:-.01em}
-h2{font-size:1.15rem;margin:32px 0 8px}
+h2{font-size:1.25rem;margin:40px 0 10px}
+h3{font-size:1rem;margin:18px 0 4px}
 p{margin:0 0 12px}
-.rule{height:4px;width:72px;border-radius:2px;background:linear-gradient(90deg,#6E3BD6,#E24C9A);margin:12px 0 24px}
-.muted{color:#6B5F7A;font-size:.9rem}
-a{color:#6E3BD6}
+ul{margin:0 0 12px 20px;padding:0}
+li{margin-bottom:6px}
+a{color:var(--link)}
+.lede{font-size:1.15rem;margin:8px 0 0}
+.rule{height:4px;width:72px;border-radius:2px;background:linear-gradient(90deg,#6E3BD6,#E24C9A);margin:16px 0 20px}
+.muted{color:var(--muted);font-size:.9rem}
+.cta{display:inline-block;background:var(--link);color:#fff;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:12px;margin:8px 12px 8px 0}
+.cta:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;padding:0;list-style:none}
+.chips li{background:var(--chip);border-radius:999px;padding:4px 12px;font-size:.9rem;margin:0}
 .faq p strong{display:block;margin-top:14px}
-@media (prefers-color-scheme:dark){body{background:#15101F;color:#F1ECF7}.muted{color:#A79BB8}a{color:#A98BF0}}
+table{width:100%;border-collapse:collapse;font-size:.95rem;margin:8px 0 12px}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600}
+.tablewrap{overflow-x:auto}
 </style>
 </head>
 <body>
 <main>
-<h1>Cropcut</h1>
-<p class="muted">Turn any photo into a sticker. Free, no ads, no account, everything on your device.</p>
+<h1>Cropcut: Sticker Maker</h1>
+<p class="lede">A completely free sticker maker and background remover for iPhone. No ads, no subscription, no account, no watermark. Everything runs on your device.</p>
 <div class="rule"></div>
 
-<h2>Contact</h2>
-<p>Cropcut is made by one independent developer. Found a bug, or have an idea? Email <a href="mailto:adles4@icloud.com">adles4@icloud.com</a> — every message is read.</p>
+<p>
+<a class="cta" href="https://apps.apple.com/app/id6810356642">Download free on the App Store</a>
+</p>
+<ul class="chips">
+<li>100% free, no Pro tier</li>
+<li>No ads</li>
+<li>No account</li>
+<li>No watermark</li>
+<li>Works offline, on-device</li>
+<li>31 languages</li>
+</ul>
+
+<h2>What Cropcut does</h2>
+<h3>Cut out anything</h3>
+<p>Tap <em>Remove Background</em> for an instant automatic cutout. If auto-detection grabs the wrong thing, use <em>Trace</em>: draw roughly around your subject with a finger and Cropcut snaps the path to the edges. Tidy up with the eraser.</p>
+<h3>Keep stickers, use them anywhere</h3>
+<p>Every cutout goes into Cropcut's sticker tray and is saved to Photos as a transparent PNG, so it works in iMessage, WhatsApp, Notes, Keynote, or any other app.</p>
+<h3>Compose</h3>
+<p>Open any photo, drop stickers onto it, drag, pinch and rotate, add text or freehand markup, then save or share. Good for memes, scrapbook pages, birthday cards and product mock-ups.</p>
+
+<h2>Who it's for</h2>
+<ul>
+<li>People making WhatsApp and iMessage stickers of their friends, pets and kids.</li>
+<li>Journalers and scrapbookers who want clean cutouts without a subscription.</li>
+<li>Anyone making memes or collages on their phone.</li>
+<li>Small sellers who need a quick product cutout with no watermark.</li>
+<li>Parents and teachers who want an editor that doesn't upload children's photos anywhere.</li>
+</ul>
+
+<h2>How Cropcut compares</h2>
+<h3>Cropcut and the iPhone's built-in Add Sticker</h3>
+<p>iOS can lift a subject out of a photo and turn it into a sticker, and for simple, well-lit photos that's a fine place to start. Cropcut is for the cases where it isn't enough: when auto-detection picks the wrong thing and you need to trace it yourself, when you want to erase a stray edge, when you want the cutout as a PNG file you can use outside Messages, or when you want to build a scene by placing stickers and text onto another photo.</p>
+
+<h3>Cropcut and subscription editors</h3>
+<p>Most sticker and background-remover apps on the App Store are free to download but put the useful parts behind a weekly or monthly subscription, add ads, or stamp a watermark on free exports. Cropcut has none of those. The trade-off is scope: Cropcut only makes stickers and composes them. It is not a full photo editor.</p>
+<div class="tablewrap">
+<table>
+<tr><th></th><th>Cropcut</th><th>Typical subscription sticker or cutout app</th></tr>
+<tr><td>Price</td><td>Free, no Pro tier</td><td>Free download, subscription of roughly US$8–13 a month to unlock</td></tr>
+<tr><td>Watermark on free exports</td><td>Never</td><td>Often</td></tr>
+<tr><td>Ads</td><td>None</td><td>Often on the free tier</td></tr>
+<tr><td>Account required</td><td>No</td><td>Usually</td></tr>
+<tr><td>Where processing happens</td><td>On your iPhone</td><td>Usually uploaded to a server</td></tr>
+<tr><td>Manual trace with edge snapping</td><td>Yes</td><td>Varies</td></tr>
+</table>
+</div>
+<p class="muted">Comparison reflects typical App Store sticker and background-remover apps as of October 2026. Other apps change their pricing often; check their listings for current terms.</p>
 
 <h2>Frequently asked</h2>
 <div class="faq">
-<p><strong>Remove Background grabbed the wrong thing.</strong> Use Trace instead: draw roughly around the part you want with your finger and Cropcut snaps the path to the edges. Crop first if the subject is small in the frame.</p>
-<p><strong>Where do my stickers go?</strong> Every cutout is saved to the sticker tray inside Cropcut and to your Photos library as a transparent PNG, so you can use it in any app.</p>
-<p><strong>How do I put a sticker on another photo?</strong> Open Compose, pick a photo, then tap a sticker in the tray. Drag to move, pinch to resize, twist to rotate. Add text or draw on top, then save or share.</p>
-<p><strong>Is it really free?</strong> Yes. There is no Pro tier, no subscription, no watermark and no daily limit.</p>
+<p><strong>Is it really free?</strong> Yes. There is no Pro tier, no subscription, no in-app purchases, no ads, no watermark and no daily limit.</p>
+<p><strong>Does Cropcut add a watermark?</strong> No. Stickers and compositions are saved as clean transparent PNGs.</p>
 <p><strong>Does Cropcut upload my photos?</strong> No. Cropcut has no server and no account. Photos never leave your device unless you share them yourself. See the <a href="privacy.html">privacy policy</a>.</p>
+<p><strong>How is this different from the iPhone's built-in Add Sticker?</strong> Cropcut adds manual tracing with edge snapping, an eraser, a sticker tray that saves cutouts as PNG files, and a Compose mode for placing stickers and text onto other photos. See the comparison above.</p>
+<p><strong>Can I make WhatsApp or iMessage stickers?</strong> Yes. Cutouts are saved to Photos as transparent PNGs, so you can send them in iMessage, add them to WhatsApp sticker packs, or paste them into any app.</p>
+<p><strong>Remove Background grabbed the wrong thing.</strong> Use Trace instead: draw roughly around the part you want and Cropcut snaps the path to the edges. Crop first if the subject is small in the frame.</p>
+<p><strong>Where do my stickers go?</strong> Into the sticker tray inside Cropcut, and into your Photos library as a transparent PNG.</p>
+<p><strong>How do I put a sticker on another photo?</strong> Open Compose, pick a photo, then tap a sticker in the tray. Drag to move, pinch to resize, twist to rotate. Add text or draw on top, then save or share.</p>
 <p><strong>Cropcut can't see my photos.</strong> Go to Settings &gt; Privacy &amp; Security &gt; Photos &gt; Cropcut and allow access to all photos or selected photos.</p>
+<p><strong>What languages does it support?</strong> The app is in 31 languages, including English, Spanish, Portuguese, French, German, Japanese, Korean, Chinese, Arabic, Hindi, Thai, Vietnamese, Ukrainian and Turkish, and is on the App Store in 175 countries.</p>
+<p><strong>Is this the same as the CropCut video editor?</strong> No. Cropcut: Sticker Maker is an independent iPhone sticker maker and background remover by a solo developer. It is not related to any CropCut video-editing app, and it is not CapCut.</p>
 </div>
 
-<h2>Links</h2>
-<p><a href="privacy.html">Privacy policy</a></p>
+<h2>Contact</h2>
+<p>Cropcut is made by one independent developer. Found a bug, or have an idea? Email <a href="mailto:adles4@icloud.com">adles4@icloud.com</a>. Every message is read.</p>
+<p><a href="https://apps.apple.com/app/id6810356642">Cropcut on the App Store</a> · <a href="privacy.html">Privacy policy</a> · <a href="https://github.com/adles4/cropcut">GitHub</a></p>
 
-<p class="muted">Cropcut is an independent app and is not affiliated with Apple Inc.</p>
+<p class="muted">Cropcut is an independent app and is not affiliated with Apple Inc., CapCut, or any other company or app mentioned.</p>
 </main>
 </body>
 </html>
