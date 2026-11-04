@@ -19,7 +19,7 @@
   "alternateName": "Cropcut",
   "operatingSystem": "iOS",
   "applicationCategory": "DesignApplication",
-  "applicationSubCategory": "Sticker maker, background remover, photo cutout",
+  "applicationSubCategory": "Sticker maker, background remover, photo cutout, lasso cutout",
   "description": "Cropcut is a completely free iPhone app that turns any photo into a sticker and puts it where you use stickers: WhatsApp, Telegram, iMessage and Photos. Tap Remove Background for an instant cutout, or trace a subject with your finger and Cropcut snaps to the edges. Pick 1 to 30 stickers and tap Add to WhatsApp or Add to Telegram to create a sticker pack; every sticker also appears in the iMessage sticker drawer. No ads, no subscription, no account, no watermark. All processing happens on the device. Not a Cricut cutting machine.",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "isAccessibleForFree": true,
@@ -40,7 +40,7 @@
     { "@type": "Question", "name": "Is Cropcut really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cropcut is completely free. There is no Pro tier, no subscription, no in-app purchases, no ads, no watermark and no daily limit." } },
     { "@type": "Question", "name": "Does Cropcut add a watermark to stickers?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every sticker and composition is saved as a clean transparent PNG with no watermark." } },
     { "@type": "Question", "name": "Does Cropcut upload my photos?", "acceptedAnswer": { "@type": "Answer", "text": "No. Cropcut has no server and no account. All background removal and editing happens on your iPhone. Photos never leave your device unless you share them yourself." } },
-    { "@type": "Question", "name": "How is Cropcut different from the iPhone's built-in Add Sticker feature?", "acceptedAnswer": { "@type": "Answer", "text": "iOS can lift a subject from a photo and turn it into a sticker, and for simple photos that works well. Cropcut adds manual tracing with edge snapping for when auto-detection picks the wrong thing, an eraser for tidying the result, a sticker tray that saves cutouts as transparent PNGs you can use in any app, and a Compose mode for placing stickers on other photos with text and freehand markup." } },
+    { "@type": "Question", "name": "How is Cropcut different from the iPhone's built-in Add Sticker feature?", "acceptedAnswer": { "@type": "Answer", "text": "iOS can lift a subject from a photo and turn it into a sticker, and for simple photos that works well. Cropcut adds manual tracing (a finger-drawn lasso) with edge snapping for when auto-detection picks the wrong thing, an eraser for tidying the result, a sticker tray that saves cutouts as transparent PNGs you can use in any app, and a Compose mode for placing stickers on other photos with text and freehand markup." } },
     { "@type": "Question", "name": "How do I add Cropcut stickers to WhatsApp or Telegram?", "acceptedAnswer": { "@type": "Answer", "text": "In the Stickers tab, pick 1 to 30 stickers and tap Add to WhatsApp to create a reusable WhatsApp sticker pack called Cropcut Stickers, or Add to Telegram for a Telegram pack. Stickers sent this way get a white die-cut outline automatically. Available in Cropcut 1.2 or later." } },
     { "@type": "Question", "name": "How do I use Cropcut stickers in iMessage?", "acceptedAnswer": { "@type": "Answer", "text": "Nothing to export. Open any conversation in Messages, tap +, then Stickers, then Cropcut. Every sticker made in the app appears there automatically." } },
     { "@type": "Question", "name": "Does Cropcut make animated stickers?", "acceptedAnswer": { "@type": "Answer", "text": "No. Cropcut makes still stickers from photos; it does not make animated or video stickers." } },
@@ -79,6 +79,10 @@ table{width:100%;border-collapse:collapse;font-size:.95rem;margin:8px 0 12px}
 th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-weight:600}
 .tablewrap{overflow-x:auto}
+.gallery{display:flex;gap:14px;overflow-x:auto;padding:4px 0 12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.gallery figure{flex:0 0 auto;margin:0;width:220px;scroll-snap-align:start}
+.gallery img{display:block;width:220px;height:auto;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+.gallery figcaption{font-size:.85rem;color:var(--muted);margin-top:6px}
 </style>
 </head>
 <body>
@@ -101,13 +105,26 @@ th{font-weight:600}
 
 <h2>What Cropcut does</h2>
 <h3>Cut out anything</h3>
-<p>Tap <em>Remove Background</em> for an instant automatic cutout. If auto-detection grabs the wrong thing, use <em>Trace</em>: draw roughly around your subject with a finger and Cropcut snaps the path to the edges. Tidy up with the eraser.</p>
+<p>Tap <em>Remove Background</em> for an instant automatic cutout. If auto-detection grabs the wrong thing, use <em>Trace</em>, a finger-drawn lasso: draw roughly around your subject and Cropcut snaps the path to the edges. Tidy up with the eraser.</p>
 <h3>Keep stickers, use them anywhere</h3>
 <p>Every cutout goes into Cropcut's sticker tray and is saved to Photos as a transparent PNG, so it works in iMessage, WhatsApp, Notes, Keynote, or any other app.</p>
 <h3>Compose</h3>
 <p>Open any photo, drop stickers onto it, drag, pinch and rotate, add text or freehand markup, then save or share. Good for memes, scrapbook pages, birthday cards and product mock-ups.</p>
 <h3>Send it as a pack</h3>
 <p>In Cropcut 1.2, pick 1 to 30 stickers and tap <em>Add to WhatsApp</em> to create a reusable WhatsApp sticker pack, or <em>Add to Telegram</em> for a Telegram pack. Stickers sent to WhatsApp or Telegram get the classic white die-cut outline automatically. For iMessage there is nothing to export: every sticker you make appears in the Messages sticker drawer (tap + in a chat, then Stickers, then Cropcut).</p>
+
+<h2>See it</h2>
+<p>Screenshots from Cropcut 1.2. Swipe sideways.</p>
+<div class="gallery">
+<figure><img src="01-cut-out-anything.webp" width="320" height="693" loading="lazy" alt="Cut out anything. Stick it anywhere. Turn your own photos into stickers."><figcaption>Cut out anything.</figcaption></figure>
+<figure><img src="02-your-stickers-in-every-chat.webp" width="320" height="693" loading="lazy" alt="Your stickers, in every chat. Add them to WhatsApp and Telegram."><figcaption>Your stickers, in every chat.</figcaption></figure>
+<figure><img src="03-or-tap-once-background-gone.webp" width="320" height="693" loading="lazy" alt="Or tap once. Background gone. Instant cutout, no fuss."><figcaption>Or tap once.</figcaption></figure>
+<figure><img src="04-drop-stickers-on-any-photo.webp" width="320" height="693" loading="lazy" alt="Drop stickers on any photo. Drag, pinch, rotate, flip."><figcaption>Drop stickers on any photo.</figcaption></figure>
+<figure><img src="05-trace-it-yourself-edges-snap.webp" width="320" height="693" loading="lazy" alt="Trace it yourself. Edges snap. Pick the one you want with a finger."><figcaption>Trace it yourself.</figcaption></figure>
+<figure><img src="06-every-cutout-becomes-a-sticker.webp" width="320" height="693" loading="lazy" alt="Every cutout becomes a sticker. Saved to Photos and your sticker tray."><figcaption>Every cutout becomes a sticker.</figcaption></figure>
+<figure><img src="07-nothing-leaves-your-phone.webp" width="320" height="693" loading="lazy" alt="Nothing leaves your phone. No account, no tracking, all on-device."><figcaption>Nothing leaves your phone.</figcaption></figure>
+<figure><img src="08-straight-into-messages.webp" width="320" height="693" loading="lazy" alt="Straight into Messages. Every sticker you make, ready to send."><figcaption>Straight into Messages.</figcaption></figure>
+</div>
 
 <h2>Who it's for</h2>
 <ul>
@@ -147,7 +164,7 @@ th{font-weight:600}
 <p><strong>How do I add Cropcut stickers to WhatsApp?</strong> Open the Stickers tab, pick 1 to 30 stickers, and tap Add to WhatsApp. WhatsApp opens with a new pack called "Cropcut Stickers", which you can rename there. Telegram works the same way with Add to Telegram. (Cropcut 1.2 or later.)</p>
 <p><strong>How do I use Cropcut stickers in iMessage?</strong> Nothing to set up. Open any conversation in Messages, tap +, then Stickers, then Cropcut. Every sticker you have made in the app is there, three to a row.</p>
 <p><strong>Does Cropcut make animated stickers?</strong> No. Cropcut makes still stickers from photos. If you need animated or video stickers, Sticker Maker Studio, StickerHub and Sticker.ly all do that.</p>
-<p><strong>Remove Background grabbed the wrong thing.</strong> Use Trace instead: draw roughly around the part you want and Cropcut snaps the path to the edges. Crop first if the subject is small in the frame.</p>
+<p><strong>Remove Background grabbed the wrong thing.</strong> Use Trace instead, which works like a lasso: draw roughly around the part you want and Cropcut snaps the path to the edges. Crop first if the subject is small in the frame.</p>
 <p><strong>Where do my stickers go?</strong> Into the sticker tray inside Cropcut, and into your Photos library as a transparent PNG.</p>
 <p><strong>How do I put a sticker on another photo?</strong> Open Compose, pick a photo, then tap a sticker in the tray. Drag to move, pinch to resize, twist to rotate. Add text or draw on top, then save or share.</p>
 <p><strong>Cropcut can't see my photos.</strong> Go to Settings &gt; Privacy &amp; Security &gt; Photos &gt; Cropcut and allow access to all photos or selected photos.</p>
